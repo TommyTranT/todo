@@ -4,7 +4,7 @@ import "./App.css";
 import { useState } from "react";
 import { MdTitle } from "react-icons/md";
 import titlepng from './title.png';
-import { Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Link } from "react-router-dom";
 
 
 
@@ -71,7 +71,7 @@ function App() {
   return (
     <div className="App">
       <div className="form">
-      <img classname="imgTitle" src={titlepng}/>
+      <img className="imgTitle" src={titlepng}/>
       
 
           <TodoForm addTodo={addTodo} />
