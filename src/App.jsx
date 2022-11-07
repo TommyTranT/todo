@@ -2,6 +2,12 @@ import TodoForm from "./TodoForm";
 import TodoItem from "./TodoItem";
 import "./App.css";
 import { useState } from "react";
+import { MdTitle } from "react-icons/md";
+import titlepng from './title.png';
+import { Routes, Route, Link } from "react-router-dom";
+
+
+
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -65,7 +71,9 @@ function App() {
   return (
     <div className="App">
       <div className="form">
-        <h1 className="title">Custom List</h1>
+      <img classname="imgTitle" src={titlepng}/>
+      
+
           <TodoForm addTodo={addTodo} />
             <div className="itemForm">
               {elements}
@@ -76,3 +84,4 @@ function App() {
 }
 
 export default App;
+
