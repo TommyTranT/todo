@@ -4,7 +4,8 @@ import "./App.css";
 import { useState } from "react";
 import { MdTitle } from "react-icons/md";
 import titlepng from './title.png';
-import { BrowserRouter, Routes, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import Home from './Home';
 
 
 
@@ -69,17 +70,41 @@ function App() {
   console.log(todos);
 
   return (
-    <div className="App">
-      <div className="form">
-      <img className="imgTitle" src={titlepng}/>
-      
+    <Router>
 
-          <TodoForm addTodo={addTodo} />
+      <img className="imgTitle" src={titlepng}/>
+              <div className="homelink">    
+              <Link to="/home">Home</Link>
+              </div>
+              <div className="createlink">  
+              <Link to="/" >Create Wishlist</Link>
+              </div>
+            <Switch>
+              <Route path='/home'>
+              <Home />
+              </Route>
+              <Route path='/'>
+
+
+                
+    <div className="cont1" >
+      <div className="cont2">
+        <div className="App">
+          <div className="form">
+
+            <TodoForm addTodo={addTodo} />
+          </div>
+        </div>
+      </div>
+            <div className="cont3">
             <div className="itemForm">
               {elements}
             </div>
-      </div>
+          </div>
     </div>
+              </Route>
+            </Switch>
+    </Router>
   );
 }
 
