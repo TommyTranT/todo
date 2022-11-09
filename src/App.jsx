@@ -4,6 +4,7 @@ import "./App.css";
 import { useState } from "react";
 // import { MdTitle } from "react-icons/md";
 import titlepng from "./title.png";
+import whiteFont from "./whiteFont.png";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import Home from "./Home";
 
@@ -67,12 +68,16 @@ function App() {
 
   return (
     <Router>
-      <img className="imgTitle" src={titlepng} />
-      <div className="homelink">
-        <Link to="/home">Home</Link>
-      </div>
-      <div className="createlink">
-        <Link to="/">Create Wishlist</Link>
+      <div className="navbar">
+        <Link to="/home">
+          <img className="imgTitle" src={whiteFont} />
+        </Link>
+
+        <div className="createlink">
+          <Link to="/">
+            <button className="btn2">Get Started!</button>
+          </Link>
+        </div>
       </div>
       <Switch>
         <Route path="/home">
