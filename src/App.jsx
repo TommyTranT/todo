@@ -2,11 +2,9 @@ import TodoForm from "./TodoForm";
 import TodoItem from "./TodoItem";
 import "./App.css";
 import { useState } from "react";
-import { MdTitle } from "react-icons/md";
+// import { MdTitle } from "react-icons/md";
 import titlepng from './title.png';
 import { BrowserRouter, Routes, Link } from "react-router-dom";
-
-
 
 
 function App() {
@@ -72,8 +70,6 @@ function App() {
     <div className="App">
       <div className="form">
       <img className="imgTitle" src={titlepng}/>
-      
-
           <TodoForm addTodo={addTodo} />
             <div className="itemForm">
               {elements}
