@@ -74,10 +74,10 @@ function App() {
 
       <img className="imgTitle" src={titlepng}/>
               <div className="homelink">    
-              <Link to="/home">Home</Link>
+              <Link to="/home" style={{ textDecoration: 'none', color: 'black' }}>Home</Link>
               </div>
               <div className="createlink">  
-              <Link to="/" >Create Wishlist</Link>
+              <Link to="/" style={{ textDecoration: 'none', color: 'black' }} >Create Wishlist</Link>
               </div>
             <Switch>
               <Route path='/home'>
