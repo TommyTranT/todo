@@ -4,6 +4,9 @@ import {AiOutlineLink} from 'react-icons/ai'
 import {RiMoneyDollarCircleFill} from 'react-icons/ri'
 import {MdDescription} from 'react-icons/md'
 import {MdDriveFileRenameOutline} from 'react-icons/md'
+import Typography from '@mui/material/Typography';
+import { TextField } from "@mui/material";
+
 
 const TodoForm = (props) => {
   const [textTodo, setTextTodo] = useState();
@@ -21,20 +24,21 @@ const TodoForm = (props) => {
   return (
     <div className="inputContainer">
       <form onSubmit={handleSubmit} className="inputBar">
-        <label><MdDriveFileRenameOutline/></label>
-        <input onChange={(e) => setTextTodo(e.target.value)} placeholder="Name"/>
+        
+        <TextField onChange={(e) => setTextTodo(e.target.value)} label="Name"/>
+        
         <br />
-        <label><MdDescription/></label>
-        <input onChange={(e) => setNoteTodo(e.target.value)} placeholder="Notes"/>
+        
+        <TextField onChange={(e) => setNoteTodo(e.target.value)} label="Notes"/>
         <br />
-        <label><RiMoneyDollarCircleFill/></label>
-        <input onChange={(e) => setPriceTodo(e.target.value)} placeholder="Price"/>
+        
+        <TextField onChange={(e) => setPriceTodo(e.target.value)} label="Price"/>
         <br />
-        <label><CgImage/></label>
-        <input onChange={(e) => setImgTodo(e.target.value)} placeholder="Img URL"/>
+        
+        <TextField onChange={(e) => setImgTodo(e.target.value)} label="Img URL"/>
         <br />
-        <label><AiOutlineLink/></label>
-        <input onChange={(e) => setLinkTodo(e.target.value)} placeholder="Direct Link"/>
+        
+        <TextField onChange={(e) => setLinkTodo(e.target.value)} label="Direct Link"/>
         <br />
         <button className="btn1">Add Your Item!</button>
       </form>
@@ -46,3 +50,24 @@ export default TodoForm;
 
 // Notes
 // on change from the input, we store the value to setTextTodo state
+
+{/* <div className="inputContainer">
+<form onSubmit={handleSubmit} className="inputBar">
+  <label><MdDriveFileRenameOutline/></label>
+  <input onChange={(e) => setTextTodo(e.target.value)} placeholder="Name"/>
+  <br />
+  <label><MdDescription/></label>
+  <input onChange={(e) => setNoteTodo(e.target.value)} placeholder="Notes"/>
+  <br />
+  <label><RiMoneyDollarCircleFill/></label>
+  <input onChange={(e) => setPriceTodo(e.target.value)} placeholder="Price"/>
+  <br />
+  <label><CgImage/></label>
+  <input onChange={(e) => setImgTodo(e.target.value)} placeholder="Img URL"/>
+  <br />
+  <label><AiOutlineLink/></label>
+  <input onChange={(e) => setLinkTodo(e.target.value)} placeholder="Direct Link"/>
+  <br />
+  <button className="btn1">Add Your Item!</button>
+</form>
+</div> */}
