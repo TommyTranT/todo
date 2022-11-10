@@ -1,10 +1,6 @@
 import React, { useState } from "react";
-import {CgImage} from 'react-icons/cg'
-import {AiOutlineLink} from 'react-icons/ai'
-import {RiMoneyDollarCircleFill} from 'react-icons/ri'
-import {MdDescription} from 'react-icons/md'
-import {MdDriveFileRenameOutline} from 'react-icons/md'
 import TextField from '@mui/material/TextField'
+
 
 const TodoForm = (props) => {
   const [textTodo, setTextTodo] = useState();
@@ -15,21 +11,20 @@ const TodoForm = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     props.addTodo(textTodo, noteTodo, priceTodo, imgTodo, linkTodo);
   };
-  
+
   return (
     <div className="inputContainer">
       <form onSubmit={handleSubmit} className="inputBar">
-        
+  
         <TextField onChange={(e) => setTextTodo(e.target.value)} label="Name"/>
         <br />
         
         <TextField onChange={(e) => setNoteTodo(e.target.value)} label="Notes"/>
         <br />
         
-        <TextField onChange={(e) => setPriceTodo(e.target.value)} label="Price"/>
+        <TextField onChange={(e) => setPriceTodo(e.target.value)} label="Price" />
         <br />
         
         <TextField onChange={(e) => setImgTodo(e.target.value)} label="Img URL"/>
@@ -37,7 +32,7 @@ const TodoForm = (props) => {
         
         <TextField onChange={(e) => setLinkTodo(e.target.value)} label="Direct Link"/>
         <br />
-        <button className="btn1">Add Your Item!</button>
+        <button className="btn1" >Add Your Item!</button>
       </form>
     </div>
   );

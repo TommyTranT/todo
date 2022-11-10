@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: montserrat;
 }
 
 .section-one {
@@ -155,3 +156,37 @@ footer {
 }
   
 
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  gap: 1rem;
+}
+
+.cardsTitle {
+  font-size: 3.15rem;
+  text-align: center;
+  padding-top: 5rem
+}
+
+.icon {
+  width: 9rem;
+}
+
+.icon1 {
+  padding-top: 1rem;
+  margin-left: 1rem;
+}
+
+.footer {
+  background-color: rgb(241, 241, 241);
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.terms {
+  margin-bottom: 0;
+}

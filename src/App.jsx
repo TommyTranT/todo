@@ -2,14 +2,15 @@ import TodoForm from "./TodoForm";
 import TodoItem from "./TodoItem";
 import "./App.css";
 import { useState } from "react";
-// import { MdTitle } from "react-icons/md";
-import titlepng from "./title.png";
 import whiteFont from "./whiteFont.png";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import Home from "./Home";
+import Button from "@mui/material/Button";
+import { width } from "@mui/system";
 
 function App() {
   const [todos, setTodos] = useState([]);
+  const [show, setShow] = useState(false);
 
   const addTodo = (text, note, price, img, link) => {
     let id = 1;
@@ -47,6 +48,11 @@ function App() {
 
     setTodos(updateTodos);
   };
+
+  const handleShow = (e) => {
+    e.preventDefault();
+    setShow((prev) => !prev)
+  }
 
   const elements = todos.map((el) => (
     <TodoItem
@@ -88,7 +94,14 @@ function App() {
             <div className="cont2">
               <div className="App">
                 <div className="form">
-                  <TodoForm addTodo={addTodo} />
+                  <Button
+                    variant="contained"
+                    onClick={handleShow}
+                    className="showButton"
+                  >
+                    Add Item
+                  </Button>
+                  {show && <TodoForm addTodo={addTodo} />}
                 </div>
               </div>
             </div>

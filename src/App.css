@@ -1,6 +1,8 @@
-/* * {
-  background-color: rgb(44, 44, 44);
-} */
+* {
+  /* background-color: rgb(44, 44, 44); */
+  font-family: montserrat;
+
+}
 
 .displayImg {
   width: 18rem;
@@ -81,14 +83,14 @@ h4 {
 }
 
 .cont1 {
-  display: flex;
-
+  display: flex
 }
 
 .cont2 {
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-left: 2%;
+  padding-right: 5%;
   padding-top: 2%;
+  height:fit-content
 }
 
 /* Needs everything in notcompletecontainer + complete css */
@@ -123,10 +125,10 @@ h4 {
   flex-wrap: wrap;
 }
 
-.inputContainer {
+/* .inputContainer {
   display:flex;
   justify-content: center;
-}
+} */
 
 .inputBar {
   display: flex;
@@ -266,4 +268,8 @@ h4 {
   margin-top: 0;
   margin-bottom: 4px;
   font-size: 1.17em;
+}
+
+.showButton {
+  width: 7rem;
 }
